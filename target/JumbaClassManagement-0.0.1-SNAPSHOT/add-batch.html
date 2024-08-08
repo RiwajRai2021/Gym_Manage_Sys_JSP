@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Participant</title>
+<style>
+.center {
+	margin: auto;
+	width: 60%;
+	border: 3px solid #2222FF;
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="center">
+	
+	<h3>Add New Batches</h3>
+	<form action = "AddBatchServlet" method="post">
+		
+	<label for="batch_name">Batch Name: </label><br>
+	<input type = "text" id="batch_name" name="batch_name" placeholder = "eg.Zumba Toning"><br><br>
+	
+	<label for="timeOfDay">TimeOfDay:</label><br>
+	<input type="text" id="phone" name="timeOfDay" placeholder="eg.Morning"><br><br>
+	
+		  
+	<!-- <!-- <label for="batchName">Batch Name:</label><br>
+	<select id="batchName" name="batchName">
+		<option value="AquaZumba">Aqua Zumba</option>
+		<option value="ChairZumba">Chair Zumba</option>
+		<option value="ToneZumba">Tone Zumba</option>
+	
+	</select><br><br>
+	 --> 
+	 
+	<input type="submit" value="Submit">
+	</form>
+	</div>
+	</body>
+	</html> 
+	
+	
