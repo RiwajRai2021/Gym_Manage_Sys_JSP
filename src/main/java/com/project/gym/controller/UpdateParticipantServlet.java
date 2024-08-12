@@ -46,6 +46,7 @@ public class UpdateParticipantServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		//participant objejct to be sent to MySqlDB
 		Participant participant = new Participant();
 
 		Integer pid = Integer.parseInt(request.getParameter("pid"));
@@ -54,6 +55,7 @@ public class UpdateParticipantServlet extends HttpServlet {
 		participant.setName(request.getParameter("name"));
 		participant.setPhone(request.getParameter("phone"));
 		participant.setEmail(request.getParameter("email"));
+		participant.setBid( Integer.parseInt(request.getParameter("bid")));
 
 		boolean pidExists = false;
 
@@ -63,7 +65,8 @@ public class UpdateParticipantServlet extends HttpServlet {
 		try (Connection connection = db.getConnection();
 				PreparedStatement ps = connection.prepareStatement(checkIF_PID_unique)) {
 
-			ps.setString(1, String.valueOf(participant.getPid()));
+		//	ps.setString(1, String.valueOf(participant.getPid()));
+				ps.setInt(1, participant.getPid());
 
 			try (ResultSet resultSet = db.executeQuery(ps)) {
 				if (resultSet != null && resultSet.next()) {
@@ -79,7 +82,7 @@ public class UpdateParticipantServlet extends HttpServlet {
 			if (pidExists) {
 				// Handle the case where the pid already exists
 				// SQL query to update participant data into the database
-				String updateSql = "UPDATE participant  Set name = ?, email = ?, phone = ? Where pid = ?";
+				String updateSql = "UPDATE participant  set name = ?, email = ?, phone = ? Where pid = ?";
 
 				try (PreparedStatement ps2 = connection.prepareStatement(updateSql)) {
 

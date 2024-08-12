@@ -16,6 +16,6 @@
 	<p><strong>BatchID:</strong> <%= request.getAttribute("participantBID") %></p>
 	
 	<br>
-	<a href="index.html">Go back to index</a>
+	<a href="index.html">Go back to HOME</a>
 </body>
 </html>

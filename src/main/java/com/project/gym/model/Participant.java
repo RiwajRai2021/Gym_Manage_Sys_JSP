@@ -6,7 +6,7 @@ public class Participant {
 	private String name;
 	private String email;
 	private String phone; 
-	private int bid;
+	private int bid; //1, 2 ,3
 	
 	
 	public Participant() {

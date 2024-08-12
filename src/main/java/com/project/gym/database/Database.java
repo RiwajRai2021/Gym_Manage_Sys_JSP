@@ -56,8 +56,14 @@ public class Database implements DAO {
 	}
 	@Override
 	public ResultSet executeQuery(PreparedStatement preparedStatement) {
-		// TODO Auto-generated method stub
-		return null;
+		ResultSet result = null;
+		try {
+			result = preparedStatement.executeQuery();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return result;
 	}
 	
 	private void connect() {

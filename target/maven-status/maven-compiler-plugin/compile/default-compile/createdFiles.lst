@@ -1,3 +1,4 @@
+com\project\gym\controller\UpdateBatchServlet.class
 com\project\gym\database\Database.class
 com\project\gym\controller\UpdateParticipantServlet.class
 com\project\gym\model\Participant.class

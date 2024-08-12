@@ -39,4 +39,14 @@
     <servlet-name>UpdateParticipantServlet</servlet-name>
     <url-pattern>/UpdateParticipantServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBatch</display-name>
+    <servlet-name>UpdateBatch</servlet-name>
+    <servlet-class>com.project.gym.controller.UpdateBatch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBatch</servlet-name>
+    <url-pattern>/UpdateBatch</url-pattern>
+  </servlet-mapping>
 </web-app>
