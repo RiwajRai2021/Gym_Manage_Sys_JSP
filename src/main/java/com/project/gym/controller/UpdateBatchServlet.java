@@ -89,7 +89,10 @@ public class UpdateBatchServlet extends HttpServlet {
 					ps3.setString(1, batch.getBatch_name());
 					ps3.setString(2, batch.getTimeOfDay());
 					ps3.setInt(3, batch.getBid());
+					
+					
 
+					//participant.setBid( Integer.parseInt(request.getParameter("bid")));
 					// Execute the update
 					int result = db.executeUpdate(ps3);
 
@@ -99,9 +102,10 @@ public class UpdateBatchServlet extends HttpServlet {
 						request.setAttribute("successMessage", "Batch updated successfully!");
 						request.setAttribute("batch_name", batch.getBatch_name());
 						request.setAttribute("timeOfDay", batch.getTimeOfDay());
+						request.setAttribute("BatchId", batch.getBid());
 
 						// forward the request to the JSP for rendering the view
-						RequestDispatcher dispatcher = request.getRequestDispatcher("/add-batch.jsp");
+						RequestDispatcher dispatcher = request.getRequestDispatcher("/update-batch.jsp");
 						dispatcher.forward(request, response);
 
 					} else {

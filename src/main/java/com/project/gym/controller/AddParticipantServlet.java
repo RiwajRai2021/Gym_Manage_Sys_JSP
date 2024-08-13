@@ -85,7 +85,7 @@ public class AddParticipantServlet extends HttpServlet {
 			        	request.setAttribute("successMessage", "Participant added successfully!"); 
 			        	request.setAttribute("participantName", sendToSqlP1.getName()); 
 			        	request.setAttribute("participantPhone",sendToSqlP1.getPhone()); 
-			        	request.setAttribute("partiicpantEmail",sendToSqlP1.getEmail()); 
+			        	request.setAttribute("participantEmail",sendToSqlP1.getEmail()); 
 			        	request.setAttribute("participantBID", sendToSqlP1.getBid()); 
 			        	
 			        	//Forward the request to the JSP for rendering the view

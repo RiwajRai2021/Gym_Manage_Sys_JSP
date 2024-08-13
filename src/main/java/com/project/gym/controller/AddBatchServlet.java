@@ -78,21 +78,22 @@ public class AddBatchServlet extends HttpServlet {
 			        
 			        // result > 0 means that a Participant record was successfully inserted. 
    
-//			        if(result > 0) {
-//			        	
-//			        	request.setAttribute("successMessage", "Participant added successfully!"); 
-//			        	request.setAttribute("participantName", sendToSqlP1.getName()); 
-//			        	request.setAttribute("participantPhone",sendToSqlP1.getPhone()); 
-//			        	request.setAttribute("partiicpantEmail",sendToSqlP1.getEmail()); 
-//			        	request.setAttribute("participantBID", sendToSqlP1.getBid()); 
-//			        	
-//			        	//Forward the request to the JSP for rendering the view
-//			        	
-//			        RequestDispatcher dispatcher = request.getRequestDispatcher("/add-participant.jsp"); 
-//			        dispatcher.forward(request, response);
-//			        
-//			        }else {
-//			        	
+		        if(result > 0) {
+			        	
+			        	request.setAttribute("successMessage", "Batch updated successfully!"); 
+			        	request.setAttribute("BatchName", sendToSqlP2.getBatch_name()); 
+			        	request.setAttribute("TimeOfDay",sendToSqlP2.getTimeOfDay()); 
+			        	request.setAttribute("participantBID", sendToSqlP2.getBid()); 
+			        	
+			        	//Forward the request to the JSP for rendering the view
+			        	
+			        RequestDispatcher dispatcher = request.getRequestDispatcher("/add-participant.jsp"); 
+			        dispatcher.forward(request, response);
+			        
+			        }else {
+			        	
+			        }
+			        	
 //			        }
 								
 				} catch (Exception e) {

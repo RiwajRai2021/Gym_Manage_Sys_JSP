@@ -20,28 +20,27 @@
 	<div class="container">
 	
 	<h2>Add New Batches</h2>
+	<hr>
 	<form action = "AddBatchServlet" method="post">
 	
 	
-	<div class="form-group">
-	<label for="batch_name">Batch Name: </label><br>
-	<input type = "text" id="batch_name" name="batch_name" placeholder = "eg.Zumba Toning" required><br>
-	</div>
-	
-	<div class="form-group">
-	<label for="timeOfDay">TimeOfDay:</label><br>
-	<input type="text" id="phone" name="timeOfDay" placeholder="eg.Morning"><br>
-	</div>
-		  
-	<!-- <!-- <label for="batchName">Batch Name:</label><br>
+	<label for="batchName">Batch Name:</label><br>
 	<select id="batchName" name="batchName">
 		<option value="AquaZumba">Aqua Zumba</option>
 		<option value="ChairZumba">Chair Zumba</option>
 		<option value="ToneZumba">Tone Zumba</option>
 	
 	</select><br><br>
-	 --> 
-	 
+	
+	
+	<label for="TimeOfDay">TimeOfDay:</label><br>
+	<select id="TimeOfDay" name="TimeOfDay">
+		<option value="Morning">Morning</option>
+		<option value="Afternoon">Afternoon</option>
+		<option value="Evening">Evening</option>
+	
+	</select><br><br>
+	
 	<input type="submit" value="Submit">
 	</form>
 	</div>
