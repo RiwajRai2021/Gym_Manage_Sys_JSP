@@ -4,15 +4,14 @@
 <title>Participant View</title>
 </head>
 <body>
-	<h2>Participant View</h2>
+	<h2>Batch View</h2>
 	<%-- Display a success message if available --%>
 	<% if (request.getAttribute("successMessage") != null) { %>
 	<p style="color: green;"><%= request.getAttribute("successMessage") %></p>
 	<% } %>
 	<%-- Your HTML content here, displaying participant data, etc. --%>
-	<p><strong>Name:</strong> <%= request.getAttribute("participantName") %></p>
-	<p><strong>Phone:</strong> <%= request.getAttribute("participantPhone") %></p>
-	<p><strong>Email:</strong> <%= request.getAttribute("participantEmail") %></p>
+	<p><strong>Batch_Name:</strong> <%= request.getAttribute("BatchName") %></p>
+	<p><strong>TimeOfDay:</strong> <%= request.getAttribute("TimeOfDay") %></p>
 	<p><strong>BatchID:</strong> <%= request.getAttribute("participantBID") %></p>
 	
 	<br>

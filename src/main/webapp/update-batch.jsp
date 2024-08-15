@@ -7,10 +7,10 @@
 	<h2>Update Batch View</h2>
 	<%-- Display a success message if available --%>
 	<% if (request.getAttribute("successMessage") != null) { %>
-	<p style="color: green;"><%= request.getAttribute("successMessage") %></p>
+	<p style="color:green;"><%= request.getAttribute("successMessage") %></p>
 	<% } %>
 	<%-- Your HTML content here, displaying participant data, etc. --%>
-	<p><strong>Batch Name:</strong> <%= request.getAttribute("batchName") %></p>
+	<p><strong>Batch Name:</strong> <%= request.getAttribute("batch_Name") %></p>
 	<p><strong>TimeOfDay:</strong> <%= request.getAttribute("TimeOfDay") %></p>
 	
 	<br>

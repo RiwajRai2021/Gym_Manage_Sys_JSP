@@ -47,7 +47,7 @@ public class AddBatchServlet extends HttpServlet {
 		Batch sendToSqlP2 = new Batch(); 
 		
 		//Set my form data in my batch object
-		 sendToSqlP2.setBatch_name(request.getParameter("batch_name"));
+		 sendToSqlP2.setBatch_name(request.getParameter("batch_Name"));
 		 sendToSqlP2.setTimeOfDay(request.getParameter("timeOfDay"));
 		 
 //		 int bidToInteger = Integer.parseInt(request.getParameter("bid")); 
@@ -80,14 +80,14 @@ public class AddBatchServlet extends HttpServlet {
    
 		        if(result > 0) {
 			        	
-			        	request.setAttribute("successMessage", "Batch updated successfully!"); 
+			        	request.setAttribute("successMessage", "Batch added successfully!"); 
 			        	request.setAttribute("BatchName", sendToSqlP2.getBatch_name()); 
 			        	request.setAttribute("TimeOfDay",sendToSqlP2.getTimeOfDay()); 
 			        	request.setAttribute("participantBID", sendToSqlP2.getBid()); 
 			        	
 			        	//Forward the request to the JSP for rendering the view
 			        	
-			        RequestDispatcher dispatcher = request.getRequestDispatcher("/add-participant.jsp"); 
+			        RequestDispatcher dispatcher = request.getRequestDispatcher("/add-batch.jsp"); 
 			        dispatcher.forward(request, response);
 			        
 			        }else {

@@ -41,12 +41,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>UpdateBatch</display-name>
-    <servlet-name>UpdateBatch</servlet-name>
-    <servlet-class>com.project.gym.controller.UpdateBatch</servlet-class>
+    <display-name>UpdateBatchServlet</display-name>
+    <servlet-name>UpdateBatchServlet</servlet-name>
+    <servlet-class>com.project.gym.controller.UpdateBatchServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>UpdateBatch</servlet-name>
-    <url-pattern>/UpdateBatch</url-pattern>
+    <servlet-name>UpdateBatchServlet</servlet-name>
+    <url-pattern>/UpdateBatchServlet</url-pattern>
   </servlet-mapping>
 </web-app>

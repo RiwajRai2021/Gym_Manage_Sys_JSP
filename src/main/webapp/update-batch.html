@@ -23,13 +23,23 @@
 	<form action = "UpdateBatchServlet" method="post">
 	
 	<div class="form-group">
-	<label for="batch_name">Batch Name: </label><br>
-	<input type = "text" id="batch_name" name="batch_name" placeholder = "eg.Jumba Cardio"><br>
+	<label for="batchName">Batch Name:</label><br>
+	<select id="batchName" name="batchName">
+		<option value="AquaZumba">Aqua Zumba</option>
+		<option value="ChairZumba">Chair Zumba</option>
+		<option value="ToneZumba">Tone Zumba</option>
+	
+	</select>
 	</div>
 	
 	<div class="form-group">
-	<label for="timeOfDay">Time of Day:</label><br>
-	<input type="text" id="timeOfDay" name="timeOfDay" placeholder="eg.Morning"><br>
+	<label for="timeOfDay">TimeOfDay:</label><br>
+	<select id="timeOfDay" name="timeOfDay">
+		<option value="Morning">Morning</option>
+		<option value="Afternoon">Afternoon</option>
+		<option value="Evening">Evening</option>
+	
+	</select>
 	</div>
 	
 	<div class="form-group">
