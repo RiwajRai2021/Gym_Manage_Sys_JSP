@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class Database implements DAO {
 	
-	//Fields pertaining to the JDBC API (Connection, PreparedStatement)
+	//Fields pertaining to the JDBC API (Connection, PreparedStatement, DriverManager)
 		//ResultSet
 		private Connection connection;
 		
@@ -43,6 +43,7 @@ public class Database implements DAO {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	@Override
 	public int executeUpdate(PreparedStatement preparedStatement) {
 		int result = 0;
@@ -66,13 +67,13 @@ public class Database implements DAO {
 		return result;
 	}
 	
+	//we use this to connect to the MySQL Database connection
 	private void connect() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String user = "riwajrai";
 			String password = "password1";
 			String url = "jdbc:mysql://localhost:3307/gymjdbc";
-			
 			connection = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
 			e.printStackTrace();
